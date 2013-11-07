@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width">
+    <title>jQuery slide anything</title>
+    <meta name="description" content="Example page for jQuery Counter Plus One plugin">
+    <link rel="stylesheet" href="styles/jcpo.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Example page for jQuery Counter Plus One plugin</h1>
+
+      <hr>
+      
+      <h2>Default, no options, following required markup</h2>
+      
+      <div class="jcpo-counter counter1">
+        <p>00053</p>
+      </div>
+      
+      <div>
+        <button type="button" class="jcpo-plusone">Counter + 1</button>
+      </div>
+      
+      <pre class="prettyprint">
+      
+  $(".counter1").counter();
+      </pre>
+      
+      <hr>
+      
+      <h2>Value script defined</h2>
+      
+      <div class="jcpo-counter counter2"></div>
+      
+      <p>use same control as above!</p>
+      
+      <pre class="prettyprint">
+      
+  $(".counter2").counter({
+      val: '06787'
+  });
+      </pre>
+      
+      <hr>
+      
+      <h2>Custom trigger</h2>
+      
+      <div class="jcpo-counter counter3"></div>
+      
+      <div class="jcpo-plusone-custom1">
+        mouse over me!
+      </div>
+      
+      <pre class="prettyprint">
+      
+  $('.counter3').counter({
+      val: '392',
+      triggerEvent: 'mouseover',
+      triggerElement: '.jcpo-plusone-custom1'
+  });
+      </pre>
+      
+      <hr>
+      
+      <h2>Another custom trigger</h2>
+      
+      <div class="jcpo-counter counter4"></div>
+      
+      <p>this is time based!</p>
+      
+      <pre class="prettyprint">
+      
+  $('.counter4').counter({
+      val: '2001',
+      countTrigger: function ($counter) {
+          setInterval(function() {
+              $.counter.plusOne($counter);
+          }, 1000);
+      }
+  });
+
+  <span class="nocode">Note: countTrigger can be anything that triggers</span>
+  $.counter.plusOne($counter) <span class="nocode">but should always be wraped
+  in</span> function ($counter) {}
+  
+      </pre>
+      
+      <hr>
+      
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery.counter.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <script>
+      $('.counter1').counter();
+      
+      $('.counter2').counter({
+        val: '06787'
+      });
+      
+      $('.counter3').counter({
+        val: '392',
+        triggerEvent: 'mouseover',
+        triggerElement: '.jcpo-plusone-custom1'
+      });
+      
+      $('.counter4').counter({
+        val: '2001',
+        countTrigger: function ($counter) {
+          setInterval(function() {
+            $.counter.plusOne($counter);
+          }, 1000);
+        }
+      });
+
+    </script>
+  </body>
+</html>
