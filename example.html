@@ -27,7 +27,21 @@
       
       <pre class="prettyprint">
       
-  $(".counter1").counter();
+  &lt;!-- Default HTML markup --&gt;
+  &lt;div class="jcpo-counter counter1"&gt;
+    &lt;p&gt;
+      00053
+    &lt;/p&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- Default trigger event to .jcpo-plusone on click --&gt;
+  &lt;button type="button" class="jcpo-plusone"&gt;
+    Counter + 1
+  &lt;/button&gt;
+  
+  &lt;script&gt;
+    $(".counter1").counter();
+  &lt;/script&gt;
       </pre>
       
       <hr>
@@ -40,9 +54,14 @@
       
       <pre class="prettyprint">
       
-  $(".counter2").counter({
-      val: '06787'
-  });
+  &lt;!-- Container for value defined in script --&gt;
+  &lt;div class="jcpo-counter counter2"&gt;&lt;/div&gt;
+  
+  &lt;script&gt; 
+    $(".counter2").counter({
+        val: '06787'
+    });
+  &lt;/script&gt;
       </pre>
       
       <hr>
@@ -83,9 +102,11 @@
       }
   });
 
-  <span class="nocode">Note: countTrigger can be anything that triggers</span>
-  $.counter.plusOne($counter) <span class="nocode">but should always be wraped
-  in</span> function ($counter) {}
+  /*
+    Note: countTrigger can be anything that triggers
+    $.counter.plusOne($counter) but should always be wraped
+    in function ($counter) {}
+  */
   
       </pre>
       
