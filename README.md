@@ -5,8 +5,9 @@ jQuery plugin that animates a counter for any purpose like page views,
 newsletter subscribers, time counter, etc.
 
 Check the file example.html to see how to implement it, it has a simple example
-plus the html markup needed and the plugin options, or check the following
-website: [jquery-counter-plus-one example page](http://www.gleiser.net/jquery-counter-plus-one/).
+plus the html markup needed and the plugin options.
+
+Download the latest version: [jquery-counter-plus-one zip file](https://dl.dropboxusercontent.com/u/26835042/github/jquery-counter-plus-one.zip).
 
 ------------------------
 Released under MIT License.
